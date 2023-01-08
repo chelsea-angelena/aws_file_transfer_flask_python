@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Index {% endblock %}</h1>
+    <h1>Hello World!</h1>
+    <h2>Welcome to FlaskApp!</h2>
+    <h3>{{ utc_dt }}</h3>
+    <form action="/upload" method="POST" enctype="multipart/form-data" >
+      <label for="file">
+        File Upload
+      <input id="file" type="file" value='file' name="file"></label>
+      <input type="submit">
+    </form>
+{% endblock %}
