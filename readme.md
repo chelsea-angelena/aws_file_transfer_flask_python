@@ -7,7 +7,8 @@ Example AWS file transfer with flask app and localstack for learning/testing pur
 #### **!! all of makefile/sftp.py code has been directly take from this repo** (before I messed around with it):
  [baermat Github Repo](https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3)
 
-- Other References: 
+##### Other References: 
+
 [Flask Docs](https://flask.palletsprojects.com/en/2.2.x/)
 
 [Local Stack Docs](https://docs.localstack.cloud/getting-started/installation/)
