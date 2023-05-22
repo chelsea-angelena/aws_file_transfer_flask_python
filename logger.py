@@ -35,4 +35,3 @@ ch.setLevel(logging.DEBUG)
 ch.setFormatter(CustomFormatter())
 
 logger.addHandler(ch)
-

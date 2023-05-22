@@ -8,3 +8,7 @@ site-packages
 localstack
 pyenv.cfg
 .env
+
+.env
+localstack/*
+pyenv.cfg

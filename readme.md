@@ -1,13 +1,20 @@
 # Flask App and AWS File Transfer
 
-Example AWS file transfer with flask app and localstack for learning/testing purposes. 
+Example file transfer with flask app and docker sftp server for learning/testing purposes.
+
+_\*note:_ to use the sftp.localstack version of this to emulate aws transfer family set up you will need a localstack API key (free trial, then changes to a monthly subscription).
+
+The local version should work without keys or env vars
 
 ## References and Resources
 
-#### **!! all of makefile/sftp.py code has been directly take from this repo** (before I messed around with it):
- [baermat Github Repo](https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3)
+[baermat Github Repo](https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3)
 
-##### Other References: 
+[Leiland - Medium Article](https://medium.com/@lejiend/create-sftp-container-using-docker-e6f099762e42)
+
+[Edward S. - Hostinger-Tutorial](https://www.hostinger.my/tutorials/how-to-use-sftp-to-safely-transfer-files/)
+
+##### Other References:
 
 [Flask Docs](https://flask.palletsprojects.com/en/2.2.x/)
 
@@ -19,15 +26,21 @@ Example AWS file transfer with flask app and localstack for learning/testing pur
 
 ## Run in Project:
 
-#### venv: 
-Python3 -m venv venv
+Env vars:
 
-source venv/bin/activate
+- change the variables in localsftp if not using localstack, and update the .env file with relevqnt env vars if using localstack with API key
 
-See makefile or refer to the repo I borrowed this from: 
+- Create virtualenv:
+  `python3 -m venv venv`
 
-baermat [Github Repo](https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3)
+- Install dependencies:
+  `pip3 -r requirements.txt`
 
-_note:_ you will need to set up a .env file 
+- Localstack (only if you have an Localstack api key):
+  `make run-localstack`
 
+- Docker SFTP server:
+  `make run-sftp`
 
+- Flask App:
+  `make run-flask`
